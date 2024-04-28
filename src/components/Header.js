@@ -1,13 +1,6 @@
 import styled from "styled-components";
 import '../Header.css'
 
-const headerStyle = {
-    backgroundColor: 'lightblue',
-    padding: '10px',
-    marginBottom: '20px',
-    width: '100%',
-  };
-
 const Header = () => {
     return(
         <div>

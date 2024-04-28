@@ -1,5 +1,4 @@
 import { Form, Link, useLoaderData, useParams } from "react-router-dom"
-import Header from '../components/Header';
 import { useState } from 'react';
 import '../Modal.module.css'
 
@@ -20,7 +19,6 @@ function Modal({ isOpen, onClose, children }) {
 
 function Index() {
     const allPatients = useLoaderData()
-    const {id} = useParams();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
