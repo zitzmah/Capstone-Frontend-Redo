@@ -1,4 +1,4 @@
-import { Form, Link, useLoaderData, useParams } from "react-router-dom"
+import { Form, Link, useLoaderData} from "react-router-dom"
 import { useState } from 'react';
 import '../Modal.module.css'
 
