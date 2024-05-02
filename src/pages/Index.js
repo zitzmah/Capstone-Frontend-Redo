@@ -100,6 +100,7 @@ const Patient = styled.div`
     border: 1px solid white;
     display: inline-block;
     padding: 1rem;
+    border-radius: 10px;
 `;
 
 export default Index
