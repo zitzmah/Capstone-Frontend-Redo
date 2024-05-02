@@ -26,18 +26,8 @@ function Index() {
 
     return (
         <div>
-            <h2>Create a Patient</h2>
-            {/* <Form action="/create" method="post">
-                <input type="input" name="name" id="name" placeholder="patient's name"/>
-                <input type="date" name="dateOfBirth" id="dateOfBirth"/>
-                <input type="text" name="sex" id="sex"/>
-                <input type="number" name="mrn" id="mrn"/>
-                <input type="text" name="bloodType" id="bloodType"/>
-                <input type="text" name="antibodyScreen" id="antibodyScreen"/>
-                <input type="text" name="antibodyID" id="antibodyID"/>
-            </Form> */}
 
-<StyledButton onClick={openModal}>Add New Patient</StyledButton>
+            <StyledButton onClick={openModal}>Add New Patient</StyledButton>
             
             <Modal isOpen={isModalOpen} onClose={closeModal}>
               <h3>Add a New Patient</h3>
@@ -76,7 +66,7 @@ function Index() {
                     Antibody ID:
                     <input type="text" name="antibodyID" id="antibodyID"/>
                 </label>
-                <button>Add New Patient</button>
+                <StyledButton>Add New Patient</StyledButton>
               </Form>
             </Modal>
 
