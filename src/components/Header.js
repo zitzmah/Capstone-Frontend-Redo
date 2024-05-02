@@ -7,7 +7,7 @@ const Header = () => {
             <HeroSection className="hero">
                 <div className="heroInner">
                     <span>
-                        <h1>Blood Bank Application</h1>
+                        <StyledLink href="/">Blood Bank Application</StyledLink>
                         
                     </span>
                 </div>
@@ -54,4 +54,12 @@ const HeroSection = styled.section`
         max-height: 720px;
     }
     
+`
+
+const StyledLink = styled.a`
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 3.3rem;
+    font-weight: bold;
 `

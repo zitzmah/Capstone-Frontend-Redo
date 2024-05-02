@@ -1,6 +1,7 @@
 import { Form, Link, useLoaderData} from "react-router-dom"
 import { useState } from 'react';
 import '../Modal.module.css'
+import styled from 'styled-components'
 
 import StyledButton from '../components/Button/Button'
 
@@ -26,7 +27,6 @@ function Index() {
 
     return (
         <div>
-
             <StyledButton onClick={openModal}>Add New Patient</StyledButton>
             
             <Modal isOpen={isModalOpen} onClose={closeModal}>
@@ -78,11 +78,13 @@ function Index() {
 
                 return (
                     <div key={aPatient.id} className="aPatient">
+                        <Patient>
                         <Link to={`/${id}`}>
-                            <h1>{aPatient.name}</h1>
+                            <h1>Patient Name: {aPatient.name}</h1>
                         </Link>
-                        <h1>{aPatient.mrn}</h1>
-                        <h3>{aPatient.title}</h3>
+                        <h2>Medical Record Number: {aPatient.mrn}</h2>
+                        <h3>Blood Type: {aPatient.bloodType}</h3>
+                        </Patient>
                     </div>
                 )
             })}
@@ -91,4 +93,15 @@ function Index() {
     )
 }
 
+const Patient = styled.div`
+    padding-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid white;
+    display: inline-block;
+    padding: 1rem;
+`;
+
 export default Index
+
+

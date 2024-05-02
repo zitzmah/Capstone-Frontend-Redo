@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import StyledButton, { FancyButton } from '../components/Button/Button';
 
 
+
 export default function Show(props) {
     const aPatient = useLoaderData();
     const id = aPatient?.url.split("/")[4];
@@ -15,9 +16,11 @@ export default function Show(props) {
 
     return (
         <PageContainer>
+            <Title>
             <h1>{aPatient.name}</h1>
             <h2>Date of Birth: {formatDateOfBirth(aPatient.dateOfBirth)}</h2>
             <h2>Medical Record Number: {aPatient.mrn}</h2>
+            </Title>
 
             <div>
                 <Form action={`/update/${id}/`} method="POST">
@@ -82,7 +85,7 @@ export default function Show(props) {
                 </ButtonWrapper>
 
                 <Link to="/">
-                    <FancyButton>Return to Home Page</FancyButton>
+                <ReturnButton to="/">Return to Home Page</ReturnButton>
                 </Link>
             </div>
 
@@ -98,12 +101,22 @@ const PageContainer = styled.div`
 const InputWrapper=styled.div`
     margin: 5px;
     font-size: 18px;
-    margin: left: 0.5rem;
+    margin-left: 38%;
+    text-align: left;
 `
 
 const ButtonWrapper=styled.div`
     display: flex;
-    gap: 3rem;
     justify-content: center;
     padding: 3rem;
 `
+
+const Title = styled.div`
+    padding-bottom: 3rem;
+`
+
+const ReturnButton = styled(FancyButton)`
+    position: absolute;
+    top: 30rem;
+    right: 20px;
+`;
