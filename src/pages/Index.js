@@ -80,10 +80,17 @@ function Index() {
                     <div key={aPatient.id} className="aPatient">
                         <Patient>
                         <Link to={`/${id}`}>
-                            <h1>Patient Name: {aPatient.name}</h1>
+                            <h2>Patient Name: {aPatient.name}</h2>
                         </Link>
-                        <h2>Medical Record Number: {aPatient.mrn}</h2>
+                        <h3>Medical Record Number: {aPatient.mrn}</h3>
+                        <h3>Date of Birth: {new Date(aPatient.dateOfBirth).toLocaleDateString('en-US', {
+                            day: 'numeric',
+                            month: 'long',
+                            year: 'numeric'
+                        })}</h3>
                         <h3>Blood Type: {aPatient.bloodType}</h3>
+                        <h4>Antibody Screen Result: {aPatient.antibodyScreen}</h4>
+                        <h4>Antibody ID: {aPatient.antibodyID}</h4>
                         </Patient>
                     </div>
                 )
@@ -94,6 +101,12 @@ function Index() {
 }
 
 const Patient = styled.div`
+    width: 400px;
+    height: 210px;
+    @media screen and (max-width: 600px) {
+        width 300px;
+        height: auto;
+    }
     padding-top: 3rem;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
@@ -101,6 +114,7 @@ const Patient = styled.div`
     display: inline-block;
     padding: 1rem;
     border-radius: 10px;
+    color: white;
 `;
 
 export default Index
