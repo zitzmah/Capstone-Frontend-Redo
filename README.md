@@ -5,7 +5,7 @@ Currently, two official plugins are available:
 
 ### By Haley Zitzmann
 
-DEPLYOYED SITE: [Click Here](https://6633fa4cbe1c740008a21e43--jazzy-smakager-e9df32.netlify.app/)
+DEPLYOYED SITE: [Click Here](https://66361317ad7ae20008a1cbc4--jazzy-smakager-e9df32.netlify.app/)
 
 ## Description on Project
 
